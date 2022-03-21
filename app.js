@@ -21,7 +21,7 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
   if (payload.event == "media.play" || payload.event == "media.resume") {
     try {
       await connectQbit();
-      console.log("QBit connection established");
+      console.debug("QBit connection established");
       const torrents = await qbit.torrents();
       let seeding = "";
       await torrents.forEach((torrent) => {
@@ -36,14 +36,14 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
         }
       });
       await qbit.pauseTorrents(seeding);
-      console.debug("Torrents paused");
+      console.log("Torrents paused");
     } catch (err) {
-      console.err("Error managing torrents: " + err);
+      console.error("Error managing torrents: " + err);
     }
   } else if (payload.event == "media.pause" || payload.event == "media.stop") {
     try {
       await connectQbit();
-      console.log("QBit connection established");
+      console.debug("QBit connection established");
       const torrents = await qbit.torrents();
       let paused = "";
       await torrents.forEach((torrent) => {
@@ -54,9 +54,9 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
         }
       });
       await qbit.resumeTorrents(paused);
-      console.debug("Torrents resumed");
+      console.log("Torrents resumed");
     } catch (err) {
-      console.err("Error managing torrents: " + err);
+      console.error("Error managing torrents: " + err);
     }
   }
 
