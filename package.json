@@ -1,0 +1,27 @@
+{
+  "name": "plex-qbit-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plesastapevka/plex-qbit-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plesastapevka/plex-qbit-manager/issues"
+  },
+  "homepage": "https://github.com/plesastapevka/plex-qbit-manager#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "multer": "^1.4.4",
+    "qbittorrent-api-v2": "^1.2.2",
+    "request": "^2.88.2"
+  }
+}
