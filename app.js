@@ -17,7 +17,7 @@ const connectQbit = async () => {
 
 app.post("/", upload.single("thumb"), async function (req, res, next) {
   var payload = JSON.parse(req.body.payload);
-  console.log("Got webhook for ", payload);
+  console.log("Got webhook for ", payload.event);
   if (payload.event == "media.play" || payload.event == "media.resume") {
     try {
       await connectQbit();
@@ -64,4 +64,4 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
 });
 
 app.listen(12000);
-console.log("Server listening on port 12000");
+console.log(`Server listening on ${process.env.QBIT_IP}:12000`);
