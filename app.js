@@ -62,6 +62,11 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
 
   res.sendStatus(200);
 });
-
+if (!process.env.QBIT_IP || process.env.PASSWORD || process.env.USERNAME) {
+  console.error("Variables not set. Set the variables and restart the container.");
+  process.exit(1);
+}
 app.listen(12000);
-console.log(`Server listening on ${process.env.QBIT_IP}:12000`);
+console.log(`Qbit client on ${process.env.QBIT_IP}`);
+console.log(`Server listening on port 12000`);
+
