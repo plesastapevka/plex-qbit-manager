@@ -62,7 +62,7 @@ app.post("/", upload.single("thumb"), async function (req, res, next) {
 
   res.sendStatus(200);
 });
-if (!process.env.QBIT_IP || process.env.PASSWORD || process.env.USERNAME) {
+if (!process.env.QBIT_IP || !process.env.PASSWORD || !process.env.USERNAME) {
   console.error("Variables not set. Set the variables and restart the container.");
   process.exit(1);
 }
