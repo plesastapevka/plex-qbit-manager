@@ -6,7 +6,7 @@ This script listens for incoming events from Plex Webhooks and on `media.play` o
 
 ## Install guide
 
-Note: You need Plex Pass to enable Webhooks - without it, this won't work.
+Note: You need **Plex Pass** to enable Webhooks - without it, this won't work.
 
 1. In Plex web go to Settings > Webhooks and click on "Add Webhook". Type in the IP address of your Unraid server on port 12000 by default (this is the port where the script listens for events), i.e. `http://192.168.1.5:12000`.
 
@@ -19,27 +19,27 @@ Note: You need Plex Pass to enable Webhooks - without it, this won't work.
 
 4. Now you need to add 3 variables. Click on "Add another Path, Port, Variable, Label or Device" and add:
     
-    - 1st variable:
-      - Config Type: `Variable` 
-      - Name: `USERNAME`
-      - Key: `USERNAME`
-      - Value: your QBitTorrent username, i.e. `admin`
-      - Description: something descriptive
+    - **1st variable:**
+      - **Config Type:** `Variable` 
+      - **Name:** `USERNAME`
+      - **Key:** `USERNAME`
+      - **Value:** your QBitTorrent username, i.e. `admin`
+      - **Description:** something descriptive
     
-    - 2nd variable:
-      - Config Type: `Variable` 
-      - Name: `PASSWORD`
-      - Key: `PASSWORD`
-      - Value: your qbittorent password, i.e. `mysupersafepassword1`
-      - Description: something even more descriptive than before
+    - **2nd variable:**
+      - **Config Type:** `Variable` 
+      - **Name:** `PASSWORD`
+      - **Key:** `PASSWORD`
+      - **Value:** your qbittorent password, i.e. `mysupersafepassword1`
+      - **Description:** something even more descriptive than before
     
-    - 3rd variable:
-      - Config Type: `Variable` 
-      - Name: `QBIT_IP`
-      - Key: `QBIT_IP`
-      - Value: your QBitTorrent IP address, port with trailing http at the beginning, i.e. `http://192.168.1.5:8080`
+    - **3rd variable:**
+      - **Config Type:** `Variable` 
+      - **Name:** `QBIT_IP`
+      - **Key:** `QBIT_IP`
+      - **Value:** your QBitTorrent IP address, port with trailing http at the beginning, i.e. `http://192.168.1.5:8080`
 
-5. Click on "Apply" and that should be it. For any issues contact me on Telegram [`@plesasta_pevka`](https://t.me/plesasta_pevka) or something.
+5. Click on "Apply" and that should be it. For any issues contact me on Telegram [`@plesasta_pevka`](https://t.me/plesasta_pevka) or \*sigh\* open an issue here.
 
 6. To test if it works simply start streaming on Plex and you should see all completed torrents paused in QBitTorrent. On pausing or stopping the stream, the torrents should resume.
 ---
