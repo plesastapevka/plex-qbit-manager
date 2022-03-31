@@ -45,6 +45,7 @@ Note: You need **Plex Pass** to enable Webhooks - without it, this won't work.
 ---
 ## More TODOs, perhaps:
 - [ ] Pause torrents only on remote streaming
+- [ ] Timestamp the logs
 - [ ] Upload to Community Apps
 - [ ] Support for more torrent clients
 - [ ] Make a WebUI (I wish)
